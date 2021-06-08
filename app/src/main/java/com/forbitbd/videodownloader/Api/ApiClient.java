@@ -1,6 +1,7 @@
 package com.forbitbd.videodownloader.Api;
 
 import com.forbitbd.videodownloader.VideoRequest;
+import com.forbitbd.videodownloader.models.VideoData;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -13,6 +14,15 @@ public interface ApiClient {
     @GET("/downloader")
     Call<ResponseBody> getVideo();
 
-    @POST("/downloader")
-    Call<ResponseBody> getVideoFromUrl(@Body VideoRequest videoRequest);
+    @POST("/youtube/downloader")
+    Call<VideoData> getVideoFromData(@Body VideoRequest videoRequest);
+
+    @POST("/youtube/filegetter")
+    Call<ResponseBody> downloadFile(@Body VideoData data);
+
+//    @POST("/downloader")
+//    Call<VideoData> getVideoFromData(@Body VideoRequest videoRequest);
+//
+//    @POST("/filegetter")
+//    Call<ResponseBody> downloadFile(@Body VideoData data);
 }

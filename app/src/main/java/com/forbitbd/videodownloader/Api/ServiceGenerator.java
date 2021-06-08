@@ -8,7 +8,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
 
-    private static final String BASE_URL = "http://mongo2.sultantracker.com:6666";
+    private static final String BASE_URL = "https://karnaphuli.sultantracker.com";
+//    private static final String BASE_URL = "http://mongo2.sultantracker.com:6601";
+//    private static final String BASE_URL = "http://103.144.201.119:4000";
 //    private static final String BASE_URL = "http://167.71.227.221:2255";
 //    private static final String BASE_URL = "http://10.0.2.2:2255/";
 

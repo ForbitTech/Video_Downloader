@@ -20,12 +20,12 @@ android {
     }
 
     signingConfigs {
-        release {
-            storeFile file("F:\\Forbit App\\Keystore\\downloader.jks")
-            storePassword "sohel2178"
-            keyAlias "key0"
-            keyPassword "sohel2178"
-        }
+//        release {
+//            storeFile file("F:\\Forbit App\\Keystore\\downloader.jks")
+//            storePassword "sohel2178"
+//            keyAlias "key0"
+//            keyPassword "sohel2178"
+//        }
     }
 
     buildTypes {
