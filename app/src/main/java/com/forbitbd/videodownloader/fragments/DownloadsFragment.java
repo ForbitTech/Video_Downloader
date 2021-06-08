@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.forbitbd.videodownloader.R;
 import com.forbitbd.videodownloader.ViewPagerAdapter;
+import com.forbitbd.videodownloader.fragments.allFragments.AllFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class DownloadsFragment extends Fragment {

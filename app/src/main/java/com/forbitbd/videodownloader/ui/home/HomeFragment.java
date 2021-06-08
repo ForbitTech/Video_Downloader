@@ -2,12 +2,18 @@ package com.forbitbd.videodownloader.ui.home;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +35,29 @@ public class HomeFragment extends Fragment implements HomeContract.View{
     private EditText video_url;
     private MaterialButton btndownload;
 
+    private BroadcastReceiver messageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            // Extract data included in the Intent
+            String message = intent.getStringExtra(Constant.MESSAGE); // -1 is going to be used as the default value
+
+            Log.d("MESSAGE",message);
+
+            if(message!=null){
+                switch (message){
+                    case Constant.DISABLE_BUTTON:
+                        btndownload.setEnabled(false);
+                        break;
+
+                    case Constant.ENABLE_BUTTON:
+                        video_url.setText("");
+                        btndownload.setEnabled(true);
+                        break;
+                }
+            }
+        }
+    };
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -36,7 +65,9 @@ public class HomeFragment extends Fragment implements HomeContract.View{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Log.d("YYYY", Environment.getStorageDirectory().toString());
+        Log.d("YYYY",Environment.getExternalStorageDirectory().toString());
+        Log.d("YYYY",getActivity().getExternalFilesDir(null).getAbsolutePath());
         mPresenter = new HomePresenter(this);
     }
 
@@ -73,6 +104,19 @@ public class HomeFragment extends Fragment implements HomeContract.View{
         Intent intent = new Intent(getContext(), DownloadService.class);
         intent.putExtra(Constant.URL,input);
         getContext().startService(intent);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LocalBroadcastManager.getInstance(getContext())
+                .registerReceiver(messageReceiver, new IntentFilter(Constant.MY_MESSAGE));
+    }
+
+    @Override
+    public void onPause() {
+        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(messageReceiver);
+        super.onPause();
     }
 
     @Override
