@@ -1,4 +1,4 @@
-package com.forbitbd.videodownloader.fragments.allFragments;
+package com.forbitbd.videodownloader.ui.allFragments;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileAdapter extends RecyclerView.Adapter<FileAdapter.FileHolder> {
+
     private List<File> fileList;
     private Context context;
     private LayoutInflater inflater;

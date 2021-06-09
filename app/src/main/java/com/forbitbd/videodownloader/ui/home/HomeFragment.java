@@ -1,7 +1,6 @@
 package com.forbitbd.videodownloader.ui.home;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -19,11 +18,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import com.forbitbd.videodownloader.Constant;
+import com.forbitbd.videodownloader.utils.Constant;
 import com.forbitbd.videodownloader.R;
 import com.forbitbd.videodownloader.downloadService.DownloadService;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
 
 import pub.devrel.easypermissions.EasyPermissions;
 

@@ -1,4 +1,4 @@
-package com.forbitbd.videodownloader.fragments;
+package com.forbitbd.videodownloader.ui.video;
 
 import android.os.Bundle;
 
@@ -11,14 +11,13 @@ import android.view.ViewGroup;
 import com.forbitbd.videodownloader.R;
 
 
-public class AudioFragment extends Fragment {
+public class VideoFragment extends Fragment {
 
 
-    public AudioFragment() {
+
+    public VideoFragment() {
         // Required empty public constructor
     }
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -30,6 +29,6 @@ public class AudioFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_audio, container, false);
+        return inflater.inflate(R.layout.fragment_video, container, false);
     }
 }

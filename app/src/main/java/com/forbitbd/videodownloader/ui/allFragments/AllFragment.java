@@ -1,4 +1,4 @@
-package com.forbitbd.videodownloader.fragments.allFragments;
+package com.forbitbd.videodownloader.ui.allFragments;
 
 import android.os.Bundle;
 
@@ -7,8 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Environment;
-import android.os.FileUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +15,6 @@ import com.forbitbd.videodownloader.R;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 

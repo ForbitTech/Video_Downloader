@@ -1,4 +1,4 @@
-package com.forbitbd.videodownloader;
+package com.forbitbd.videodownloader.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

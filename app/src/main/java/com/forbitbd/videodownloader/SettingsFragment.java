@@ -1,4 +1,4 @@
-package com.forbitbd.videodownloader.fragments;
+package com.forbitbd.videodownloader;
 
 import android.content.Intent;
 import android.net.Uri;

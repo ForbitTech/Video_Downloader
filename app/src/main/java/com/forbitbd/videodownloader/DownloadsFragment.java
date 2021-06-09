@@ -1,4 +1,4 @@
-package com.forbitbd.videodownloader.fragments;
+package com.forbitbd.videodownloader;
 
 import android.os.Bundle;
 
@@ -9,9 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.forbitbd.videodownloader.R;
-import com.forbitbd.videodownloader.ViewPagerAdapter;
-import com.forbitbd.videodownloader.fragments.allFragments.AllFragment;
+import com.forbitbd.videodownloader.adapter.ViewPagerAdapter;
+import com.forbitbd.videodownloader.ui.allFragments.AllFragment;
+import com.forbitbd.videodownloader.ui.audio.AudioFragment;
+import com.forbitbd.videodownloader.ui.video.VideoFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class DownloadsFragment extends Fragment {

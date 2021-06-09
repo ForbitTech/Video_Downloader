@@ -1,6 +1,6 @@
 package com.forbitbd.videodownloader.Api;
 
-import com.forbitbd.videodownloader.VideoRequest;
+import com.forbitbd.videodownloader.utils.VideoRequest;
 import com.forbitbd.videodownloader.models.VideoData;
 
 import okhttp3.ResponseBody;

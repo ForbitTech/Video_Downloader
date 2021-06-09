@@ -2,7 +2,6 @@ package com.forbitbd.videodownloader.downloadService;
 
 import android.app.Service;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
 import android.util.Log;
@@ -13,9 +12,9 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.forbitbd.videodownloader.Api.ApiClient;
 import com.forbitbd.videodownloader.Api.ServiceGenerator;
-import com.forbitbd.videodownloader.Constant;
+import com.forbitbd.videodownloader.utils.Constant;
 import com.forbitbd.videodownloader.R;
-import com.forbitbd.videodownloader.VideoRequest;
+import com.forbitbd.videodownloader.utils.VideoRequest;
 import com.forbitbd.videodownloader.models.VideoData;
 
 import java.io.File;
@@ -23,8 +22,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;

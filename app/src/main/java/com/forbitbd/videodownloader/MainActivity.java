@@ -8,8 +8,6 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.forbitbd.videodownloader.fragments.DownloadsFragment;
-import com.forbitbd.videodownloader.fragments.SettingsFragment;
 import com.forbitbd.videodownloader.ui.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

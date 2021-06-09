@@ -1,4 +1,4 @@
-package com.forbitbd.videodownloader;
+package com.forbitbd.videodownloader.utils;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.forbitbd.videodownloader.fragments.allFragments;
+package com.forbitbd.videodownloader.ui.allFragments;
 
 public interface AllFragmentContract {
 
